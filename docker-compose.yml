@@ -2,13 +2,35 @@ version: '2'
 services:
 
   # --------------------------------------------------------------
-  mysql:
+  mysql1:
     image: mysql:5.7
-    container_name: mysql_test
+    container_name: mysql-test-1
     volumes:
-      - ./data/mysql:/var/lib/mysql
+      - ./data/mysql1:/var/lib/mysql
     environment:
       - "MYSQL_ROOT_PASSWORD=secret"
     ports:
-        - "33060:3306"
+        - "33061:3306"
+
+  # --------------------------------------------------------------
+  mysql2:
+    image: mysql:5.7
+    container_name: mysql-test-2
+    volumes:
+      - ./data/mysql2:/var/lib/mysql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=secret"
+    ports:
+        - "33062:3306"
+
+  # --------------------------------------------------------------
+  mysql3:
+    image: mysql:5.7
+    container_name: mysql-test-3
+    volumes:
+      - ./data/mysql3:/var/lib/mysql
+    environment:
+      - "MYSQL_ROOT_PASSWORD=secret"
+    ports:
+        - "33063:3306"
 
