@@ -11,8 +11,3 @@ echo ""
 
 docker image ls
 
-echo ""
-echo "-- Directory list -----------------------------------"
-echo ""
-
-du -sch dbdata pmmdata/*
